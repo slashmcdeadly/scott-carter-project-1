@@ -6,12 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4e1f69d068.js" crossorigin="anonymous"></script>
+
     <title>Document</title>
 </head>
 <body> 
     <header>
+        <input type="radio" class="hidden" value="hidden"> <i class="fas fa-bars"></i></div>
         <div class="wrapper">
-            <nav>
+            <nav class="topNav">
                 <ul class="clearfix">
                     <li><a href="#">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -26,9 +29,12 @@
                 <p>Jewelers</p>
             </div>
             
-            <div class="socialMedia"> 
-                <!-- put in the <i> tag in here with the social media logos -->
-                </div>
+        </div>
+        <div class="socialMedia"> 
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-snapchat-ghost"></i>
+            <i class="fab fa-twitter"></i>
         </div>
     </header>
 
@@ -65,40 +71,46 @@
                 <div class="wrapper clearfix">
                     <div>
                         <!-- image thing for catalogue -->
+                        <p>
+                            <i class="far fa-images"></i>
+                        </p>
+
                         <h3>catalogue</h3>
                     </div>
                     
                     <div>
                         <!-- image for events -->
+                        <i class="far fa-calendar-alt"></i>
                         <h3>events</h3>
                     </div>
                     <div>
                         <!-- image for collab -->
+                        <i class="far fa-handshake"></i>
                         <h3>collaborations</h3>
                     </div>
                 </div>
         </section>
 
         <section class="blog">
-            <div class="clearfix">
+            <div class="blogContainer clearfix">
 
-                <div class="blogTop">
-                    <div class="article clearfix">
+                <div class="blogTop wrapper clearfix">
+                    <div class="article">
                         <h2>sustainable materials</h2>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora totam placeat officia similique corrupti enim voluptates minus reiciendis repellendus quas dicta culpa laborum fugiat, tempore repellat! Tempore assumenda quae blanditiis? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum praesentium nobis!</p>
                         <button>read more</button>
                     </div>
                     
-                    <div class="imageContainer clearfix">
-                        <img src="./assets/image-2@2x.png" alt="a woman wearing a necklace">    
-                    </div>
                     
                 </div>
+                <div class="imageContainer imageContainerTop clearfix">
+                    <img src="./assets/image-2@2x.png" alt="a woman wearing a necklace">    
+                </div>
                 
-                <div class="blogBottom">
-                    <div class="imageContainer clearfix">
-                        <img src="./assets/image-2-copy@2x.png" alt="a dangling hand wearing 2 rings and a watch">
-                    </div>
+                <div class="imageContainer imageContainerBottom clearfix">
+                    <img src="./assets/image-2-copy@2x.png" alt="a dangling hand wearing 2 rings and a watch">
+                </div>
+                <div class="blogBottom wrapper">
                     
                     <div class="article clearfix">
                         <h2>mix & match</h2>
@@ -146,7 +158,7 @@
 
     <footer>
         <div>
-            <p>Copyright *copyright sign* 2019 HackerYou</p>
+            <p>Copyright &copy; 2019 HackerYou</p>
         </div>
     </footer>
 

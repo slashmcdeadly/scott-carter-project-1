@@ -22,6 +22,10 @@ img {
     width: 90%;
 }
 
+.hidden {
+    display: none;
+}
+
 h1, h2, h3, button {
     text-transform: uppercase;
 }
@@ -75,7 +79,7 @@ nav li a, header p {
 
 /* nav section */
 
-nav li {
+.topNav li {
     float: left;
     margin: 20px 60px 0px 0px;
 }
@@ -111,6 +115,20 @@ header span {
     position: absolute;
     top: 250px;
     left: 30px;
+}
+
+.socialMedia {
+    float: right;
+    position: absolute;
+    top: 75%;
+    right: 5%;
+}
+
+.socialMedia i {
+    display: block;
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
 header p {
@@ -177,6 +195,14 @@ header p {
     height: 40vh;
 }
 
+.linkBanner i {
+    color: #FABA63;
+    font-size: 7.5rem;
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 .linkBanner h3 {
     text-align: center;
 }
@@ -184,7 +210,7 @@ header p {
 .linkBanner div div {
     width: calc(100% / 3);
     float: left;
-    padding-top: 200px;
+    padding-top: 100px;
 }
 
 /* blog section */
@@ -193,19 +219,33 @@ header p {
     background: #201E21;
 }
 
-.blogTop .article, .blogTop .imageContainer,
-.blogBottom .article, .blogBottom .imageContainer{
+.blogContainer {
+    position: relative;
+    max-height: 100%;
+}
+
+.blogTop .article, .blog .imageContainer,
+.blogBottom .article{
     float: left;
-    width: 50%;
+    max-width: 50%;
 }
 
-.blog .article:first-of-type {
-    padding: 150px 100px 120px 165px;
+.blogContainer .imageContainerTop{
+    position: absolute;
+    right: 0px;
+    top: 0px;
 }
 
-.blog .article:last-of-type {
-    padding: 190px 165px 120px 100px;
+.blogTop .article {
+    padding: 150px 100px 151px 0px;
 }
+
+.blogBottom .article {
+    padding: 190px 0px 150px 100px;
+    float: right;
+}
+
+/* maybe try to put it in a wrapper but position the image right of the wrapper */
 
 .blogTop .article h2 {
     width: 50%;
@@ -227,8 +267,14 @@ header p {
     float: left;
 }
 
+.bottomNav ul {
+    padding-top: 100px;
+}
+
 .bottomNav li a {
     color: white;
+    font-family: 'Italiana', serif;
+    text-transform: uppercase;
 }
 
 .bottomNav li {
@@ -237,13 +283,14 @@ header p {
 
 .bottomNav, .contact {
     width: 25%;
-    min-height: 33vh;
+    min-height: 40vh;
 }
 
 .newsletter {
     width: 50%;
     text-align: center;
     min-height: 33vh;
+    padding-top: 100px;
 }
 
 .emailContainer {
@@ -267,6 +314,7 @@ input, .emailContainer button {
 
 .contact {
     text-align: right;
+    padding-top: 100px;
 }
 
 
