@@ -31,7 +31,7 @@ h1, h2, h3, p, button {
 }
 
 h1 {
-    font-size: 19.2rem;
+    font-size: 18.2rem;
     color: white;
     font-family: 'Italiana', serif;
     text-align: right;
@@ -62,6 +62,7 @@ button {
     padding: 10px;
     font-size: 2.5rem;
     margin-top: 20px;
+    font-family: 'Italiana', serif;
 }
 
 nav li a, header p {
@@ -108,8 +109,8 @@ header span {
     position: absolute;
     width: 40%;
     position: absolute;
-    top: 310px;
-    left: 50px;
+    top: 250px;
+    left: 30px;
 }
 
 header p {
@@ -122,16 +123,15 @@ header p {
 /* about section */
 
 .about {
-    min-height: 40vh;
+    min-height: 50vh;
     background: #14171F;
 }
 
 .about .imageContainer {
     max-width: 25%;
     float: left;
-    margin: 30px 0;
     padding-right: 50px;
-    margin: 80px 0;
+    margin: 150px 0;
 }
 
 .imageContainer {
@@ -141,7 +141,7 @@ header p {
 .about .article {
     max-width: 75%;
     float: left;
-    margin-top: 80px;
+    margin-top: 150px;
 }
 
 
@@ -153,23 +153,38 @@ header p {
 
 .collection h2 {
     text-align: center;
+    padding: 100px 0;
 }
+
 
 .collection .imageContainer {
     float: left;
-    max-width: calc((100% / 3) - 20px);
+    max-width: calc((100% / 3) - 50px);
+}
+
+.collection .imageContainer:first-of-type {
+    margin: 0px 50px 120px 0px;
+}
+
+.collection .imageContainer:last-of-type {
+    margin: 0px 0px 150px 50px;
 }
 
 /* links section */
 
 .linkBanner {
     background: #14171F;
-    height: 50vh;
+    height: 40vh;
+}
+
+.linkBanner h3 {
+    text-align: center;
 }
 
 .linkBanner div div {
     width: calc(100% / 3);
     float: left;
+    padding-top: 200px;
 }
 
 /* blog section */
@@ -183,6 +198,19 @@ header p {
     float: left;
     width: 50%;
 }
+
+.blog .article:first-of-type {
+    padding: 150px 100px 120px 165px;
+}
+
+.blog .article:last-of-type {
+    padding: 190px 165px 120px 100px;
+}
+
+.blogTop .article h2 {
+    width: 50%;
+}
+
 
 /* bottom navigation area */
 
