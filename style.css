@@ -90,6 +90,18 @@ nav li a {
     line-height: 2.9rem;
 }
 
+.hamburgerMenu {
+    position: relative;
+    color: white;
+    font-size: 4rem;
+}
+
+.hamburgerMenu label {
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+
 /* header section */
 
 header {
@@ -107,11 +119,19 @@ header div {
 header span {
     display: inline-block;
     text-align: left;
+    max-width: 100%;
+}
+
+header span::before {
+    content: "-";
+}
+
+header span::after {
+    content: "-";
 }
 
 .companyName {
-    position: absolute;
-    width: 40%;
+    max-width: 100%;
     position: absolute;
     top: 250px;
     left: 30px;
@@ -259,6 +279,10 @@ header p {
     width: 50%;
 }
 
+.imageContainerBottom {
+    height: 100%;
+}
+
 
 /* bottom navigation area */
 
@@ -363,4 +387,249 @@ footer p  {
 
 /* media queries */
 
+/* Portrait tablet and small desktops */
+@media (max-width: 1000px) {
 
+    header {
+        background-position: -400px;
+    }
+
+     /* about section */
+
+    .about .imageContainer, .about .article {
+        float: none;
+    }
+
+    .about .imageContainer {
+        display: none;
+        padding: 80px 0px 80px 0px;
+    }
+
+    .about .hiddenImageContainer {
+        display: inline-block;
+        padding: 80px 0px 50px 0px;
+    }
+
+    .about .article {
+        max-width: 100%;
+        margin-top: 0px;
+    }
+
+    .about h2, .about p {
+        text-align: center;
+    }
+    .about .article p {
+        margin-bottom: 0px;
+    }
+
+    .about div div:last-child{
+        width: 156px;
+        margin: 0 auto;
+        padding: 50px 0px;
+    }
+
+    .about button {
+        margin: 0;
+    }
+
+    /* blog section */
+
+    .blogTop .article,
+    .blogBottom .article{
+        max-width: 100%;
+        float: right;
+        text-align: center;
+    }
+
+    .blogTop .article {
+        padding-right: 0px;
+    }
+
+    .blogTop .article, .blogBottom .article {
+        padding: 50px 0px;
+    }
+
+    .blogTop .article h2, .blogTop p {
+        width: 100%;
+        
+    }
+    
+    .blog .imageContainer {
+        max-width: 100%;
+        display: inline-block;
+    }
+
+    .blogContainer .imageContainerTop {
+        display: none;
+    }
+
+    /* crop photo in css somehow, or in photoshop */
+
+    .imageContainerBottom img {
+        object-fit: fill;
+    }
+
+    .hiddenContainer {
+        display: block;
+    }
+
+    .blogTop {
+        display: block;
+    }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+
+    /* general styles */
+
+    header {
+        background-position: -600px;
+    }
+
+    /* nav section */
+
+    .hamburgerMenu {
+        display: block;
+        position: fixed;
+        z-index: 999;
+    }
+
+    .topNav {
+        display: none;
+    }
+
+    .socialMedia {
+        display: none;
+    }
+
+    /* hero page styles */
+
+
+    h1 {
+        font-size: 9rem;
+        line-height: 9rem;
+    }
+
+    header p {
+        font-size: 3rem;
+    }
+
+    .companyName {
+        top: 200px;
+        left: 0px;
+    }
+
+    /* collection section */
+
+    .collection .imageContainer {
+        max-width: calc((100% / 2) - 25px);
+    }
+
+    .collectionImages div:last-of-type {
+        display: none;
+    }
+
+    /* banner links section */
+    
+    .linkBanner {
+        height: 100%;
+    }
+
+    .linkBanner div div {
+        width: 100%;
+        float: none;
+        padding-top: 50px;
+    }
+
+    .linkBanner div div:first-of-type {
+        padding-top: 100px;
+    }
+
+    .linkBanner div div:last-of-type{
+        padding-bottom: 100px;
+    }
+
+    /* bottom contact info*/
+
+    .bottomNav {
+        min-height: 100%;
+    }
+
+    .container div {
+        float: none;
+    }
+
+    .bottomNav ul li {
+        float: left;
+        width: 20%;
+    }
+
+    .bottomNav li a {
+        text-transform: none;
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+    }
+
+    .bottomNav ul {
+        padding-top: 50px;
+    }
+
+    .bottomNav, .contact, .newsletter {
+        width: 100%;
+    }
+
+    .newsletter {
+        padding-top: 90px;
+    }
+
+    input[type='email'], .emailContainer button {
+        width: 100%;
+        bottom: -10px;
+    }
+
+    .emailContainer button {
+        margin-top: 10px;
+    }
+
+    .contact {
+        text-align: center;
+        padding: 60px 0px;
+        min-height: 100%;
+    }
+    
+
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+    
+    header  {
+        background-image: url(./assets/header-1.jpg);
+        background-position: 0px;
+    }
+
+    h1  {
+        font-size: 6rem;
+        line-height: 6rem;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+    }
+
+    .article p {
+        text-align: left;
+        padding-top: 20px;
+    }
+
+    .collection h2 {
+        padding-top: 70px;
+    }
+
+    .collection .imageContainer:first-of-type {
+        margin: 0px 50px 70px 0px;
+    }
+
+}

@@ -12,7 +12,27 @@
 </head>
 <body> 
     <header>
-        <input type="radio" class="hidden" value="hidden"> <i class="fas fa-bars"></i></div>
+        <div class="hidden hamburgerMenu wrapper">
+            <input type="checkbox" value="hidden"> 
+            <label for="menu"><i class="fas fa-bars"></i></label>
+        </div>
+        <div class="hiddenMenu hidden">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class=hiddenSocialMedia"> 
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-snapchat-ghost"></i>
+                <i class="fab fa-twitter"></i>
+            </div>
+        </div>
         <div class="wrapper">
             <nav class="topNav">
                 <ul class="clearfix">
@@ -21,11 +41,12 @@
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
+                
             </nav>
-<!-- this is a test -->
 
             <div class="companyName">
-                <h1><span>-aro-</span>ra</h1>
+                <h1><span>aro</span></h1>
+                <h1>ra</h1>
                 <p>Jewelers</p>
             </div>
             
@@ -41,7 +62,9 @@
     <main>
         <section class="about" id="about">
             <div class="wrapper clearfix">
-                
+                <div class="hiddenImageContainer hidden">
+                    <img src="./assets/kyle-frederick-1042416-unsplash.jpg" alt="hands holding 3 rings">
+                </div>
                 <div class="imageContainer">
                     <img src="./assets/image-6@2x.png" alt="hands holding 3 rings">
                 </div>
@@ -49,7 +72,9 @@
                     <h2>hand crafted</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id necessitatibus sed dignissimos exercitationem cumque modi quasi quae temporibus animi magnam! Incidunt quisquam excepturi placeat amet accusantium non enim ut sapiente ducimus laboriosam fugit perferendis id sed doloribus aut numquam eius, nostrum ipsa fugiat? Hic suscipit sit incidunt ad sunt quisquam? Eius, tempora. Voluptas modi earum deleniti repellat ea, in fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, assumenda? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, nihil. </p>
                 </div>
-                <button>read more</button>
+                <div>
+                    <button>read more</button>
+                </div>
             </div>
         </section>
             
@@ -70,7 +95,6 @@
             <section class="linkBanner">
                 <div class="wrapper clearfix">
                     <div>
-                        <!-- image thing for catalogue -->
                         <p>
                             <i class="far fa-images"></i>
                         </p>
@@ -79,12 +103,10 @@
                     </div>
                     
                     <div>
-                        <!-- image for events -->
                         <i class="far fa-calendar-alt"></i>
                         <h3>events</h3>
                     </div>
                     <div>
-                        <!-- image for collab -->
                         <i class="far fa-handshake"></i>
                         <h3>collaborations</h3>
                     </div>
@@ -93,6 +115,10 @@
 
         <section class="blog">
             <div class="blogContainer clearfix">
+
+                <div class="imageContainer hiddenContainer clearfix hidden">
+                    <img src="./assets/andie-gomez-acebo-744590-unsplash.jpg" alt="a woman wearing a necklace">    
+                </div>
 
                 <div class="blogTop wrapper clearfix">
                     <div class="article">
@@ -128,10 +154,10 @@
                 <div class="bottomNav">
                     <nav>
                         <ul>
-                            <li><a href="#">home</a></li>
-                            <li><a href="#">blog</a></li>
-                            <li><a href="#">gallery</a></li>
-                            <li><a href="#">contact</a></li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Gallery</a></li>
+                            <li><a href="#">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
