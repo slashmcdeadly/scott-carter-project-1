@@ -69,6 +69,17 @@ button {
     font-family: 'Italiana', serif;
 }
 
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+button:hover {
+    background-color: #FABA63;
+    color: black;
+    transition: all .3s;
+}
+
 nav li a, header p {
     color: #FABA63;
     font-family: 'Lato', sans-serif;
@@ -90,16 +101,90 @@ nav li a {
     line-height: 2.9rem;
 }
 
-.hamburgerMenu {
+.hiddenMenu nav {
     position: relative;
     color: white;
     font-size: 4rem;
 }
 
-.hamburgerMenu label {
+.hiddenMenu label {
     position: absolute;
     right: 0;
     top: 20px;
+}
+
+.hiddenMenu label i {
+    font-size: 4rem;
+    transform: scale(1.75, 1);
+}
+
+/* slide out menu */
+
+ul.hiddenNav {
+    background: #201E21;
+    border-right: 5px solid #FABA63;
+    position: fixed;
+    margin-top: 0px;
+	z-index: 10;
+	width: 40%; 
+	left: -40%; 
+	top: 0;
+	height: 100%;
+	transition: all 0.5s; 
+}
+
+.hiddenNav li a {
+	border-bottom: 1px solid grey;
+    display: inline-block;
+    font-family: 'Italiana', serif;
+    font-size: 3rem;
+    text-decoration: none;
+    color: white;
+	width: 100%;
+	padding: 20px;
+    transition: all 0.3s; 
+}
+
+input[type="checkbox"]:checked + ul.hiddenNav {
+    left: 0;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+label[for="toggle"] {
+    position: fixed;
+	top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 4rem;
+	z-index: 10;
+}
+
+.hiddenNav .companyName {
+    position: relative;
+    top: 50px;
+    right: 30px;
+    transform: scale(.7);
+}
+
+.hiddenNav ul {
+    position: absolute;
+    bottom: 20px;
+    left: 2%;
+    width: 100%;
+}
+
+.hiddenNav ul li a {
+    border: none;
+    float: left;
+    padding-right: 20px;
+    width: calc((100% / 4) - 10px);
+}
+
+.hiddenNav ul li a:last-of-type {
+    padding-right: 0px;
 }
 
 /* header section */
@@ -144,7 +229,7 @@ header span::after {
     right: 5%;
 }
 
-.socialMedia i {
+.socialMedia a {
     display: block;
     color: white;
     font-size: 2.5rem;
@@ -227,6 +312,10 @@ header p {
     display: block;
     text-align: center;
     margin-bottom: 30px;
+}
+
+.linkBanner a {
+    text-decoration: none;
 }
 
 .linkBanner h3 {
@@ -338,22 +427,29 @@ header p {
 
 input[type='email'] {
     width: 75%;
-    padding-left: 30px;
+    padding: 15px 30px;
     font-size: 2rem;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
+    border: 0;
 }
 
 .emailContainer button {
-    background: #201E21;
+    background: black;
     border: 1px solid #201E21;
     width: 24%;
     position: relative;
-    top: -5px;
+    bottom: 2px;
     font-size: 1.7rem;
+    padding: 18px;
 }
 
-input, .emailContainer button {
+.emailContainer button:hover {
+    color: white;
+    border: 2px solid white;
+}
+
+.emailContainer {
     height: 50px;
     position: relative;
     bottom: 10px;
@@ -378,7 +474,7 @@ input, .emailContainer button {
 /* footer */
 
 footer {
-    background: #201E21;
+    background: black;
 }
 
 footer p  {
@@ -453,10 +549,17 @@ footer p  {
         width: 100%;
         
     }
+
+    .imageContainerBottom {
+        display: none;
+    }
+
+    .hiddenImageContainerBottom {
+        display: inline-block;
+    }
     
     .blog .imageContainer {
         max-width: 100%;
-        display: inline-block;
     }
 
     .blogContainer .imageContainerTop {
@@ -476,6 +579,61 @@ footer p  {
     .blogTop {
         display: block;
     }
+
+    /* bottom contact info*/
+
+    .bottomNav {
+        min-height: 100%;
+    }
+
+    .container div {
+        float: none;
+    }
+
+    .bottomNav ul li {
+        float: left;
+        width: 20%;
+    }
+
+    .bottomNav li a {
+        text-transform: none;
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+    }
+
+    .bottomNav ul {
+        padding-top: 50px;
+    }
+
+    .bottomNav, .contact, .newsletter {
+        width: 100%;
+    }
+
+    .newsletter {
+        padding-top: 90px;
+    }
+
+    .emailContainer {
+        padding-top: 30px;
+    }
+
+    input[type='email'], .emailContainer button {
+        width: 100%;
+        bottom: 0px;
+        font-size: 3rem;
+    }
+
+    .emailContainer button {
+        margin-top: 10px;
+        font-size: 3rem;
+    }
+
+    .contact {
+        text-align: center;
+        padding: 100px 0px 60px 0px;
+        min-height: 100%;
+    }
+    
 }
 
 /* Landscape phone to portrait tablet */
@@ -489,7 +647,7 @@ footer p  {
 
     /* nav section */
 
-    .hamburgerMenu {
+    .hiddenMenu {
         display: block;
         position: fixed;
         z-index: 999;
@@ -550,53 +708,6 @@ footer p  {
         padding-bottom: 100px;
     }
 
-    /* bottom contact info*/
-
-    .bottomNav {
-        min-height: 100%;
-    }
-
-    .container div {
-        float: none;
-    }
-
-    .bottomNav ul li {
-        float: left;
-        width: 20%;
-    }
-
-    .bottomNav li a {
-        text-transform: none;
-        font-family: 'Lato', sans-serif;
-        font-weight: 300;
-    }
-
-    .bottomNav ul {
-        padding-top: 50px;
-    }
-
-    .bottomNav, .contact, .newsletter {
-        width: 100%;
-    }
-
-    .newsletter {
-        padding-top: 90px;
-    }
-
-    input[type='email'], .emailContainer button {
-        width: 100%;
-        bottom: -10px;
-    }
-
-    .emailContainer button {
-        margin-top: 10px;
-    }
-
-    .contact {
-        text-align: center;
-        padding: 60px 0px;
-        min-height: 100%;
-    }
     
 
 }
@@ -628,8 +739,12 @@ footer p  {
         padding-top: 70px;
     }
 
+    .collection .imageContainer {
+        max-width: calc((100% / 2) - 7.5px);
+    }
+
     .collection .imageContainer:first-of-type {
-        margin: 0px 50px 70px 0px;
+        margin: 0px 15px 70px 0px;
     }
 
 }

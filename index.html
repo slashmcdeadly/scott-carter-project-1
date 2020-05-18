@@ -12,34 +12,52 @@
 </head>
 <body> 
     <header>
-        <div class="hidden hamburgerMenu wrapper">
-            <input type="checkbox" value="hidden"> 
-            <label for="menu"><i class="fas fa-bars"></i></label>
-        </div>
+    
         <div class="hiddenMenu hidden">
             <nav>
-                <ul>
+
+                <label for="toggle"><i class="fa fa-bars hidden"></i></label>
+		        <input type="checkbox" id="toggle" name="toggle">
+
+                <ul class="hiddenNav">
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    
+                    <div class="companyName">
+                        <h1><span>aro</span></h1>
+                        <h1>ra</h1>
+                        <p>Jewelers</p>
+                    </div>
+
+                    <ul class=hiddenSocialMedia"> 
+                        <li>
+                            <a href="http://instagram.com"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="http://facebook.com"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a href="http://snapchat.com"><i class="fab fa-snapchat-ghost"></i></a>
+                        </li>
+                        <li>
+                            <a href="http://twitter.com"><i class="fab fa-twitter"></i></a>
+                        </li>
+                
+                    </ul>
+                </ul> 
             </nav>
 
-            <div class=hiddenSocialMedia"> 
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-snapchat-ghost"></i>
-                <i class="fab fa-twitter"></i>
-            </div>
+            
         </div>
         <div class="wrapper">
             <nav class="topNav">
                 <ul class="clearfix">
                     <li><a href="#">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
                 
             </nav>
@@ -51,12 +69,21 @@
             </div>
             
         </div>
-        <div class="socialMedia"> 
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-snapchat-ghost"></i>
-            <i class="fab fa-twitter"></i>
-        </div>
+        <ul class="socialMedia"> 
+            <li>
+                <a href="http://instagram.com"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+                <a href="http://facebook.com"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li>
+                <a href="http://snapchat.com"><i class="fab fa-snapchat-ghost"></i></a>
+            </li>
+            <li>
+                <a href="http://twitter.com"><i class="fab fa-twitter"></i></a>
+            </li>
+    
+        </ul>
     </header>
 
     <main>
@@ -73,12 +100,12 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id necessitatibus sed dignissimos exercitationem cumque modi quasi quae temporibus animi magnam! Incidunt quisquam excepturi placeat amet accusantium non enim ut sapiente ducimus laboriosam fugit perferendis id sed doloribus aut numquam eius, nostrum ipsa fugiat? Hic suscipit sit incidunt ad sunt quisquam? Eius, tempora. Voluptas modi earum deleniti repellat ea, in fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, assumenda? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, nihil. </p>
                 </div>
                 <div>
-                    <button>read more</button>
+                    <button><a href="#">read more</a></button>
                 </div>
             </div>
         </section>
             
-        <section class="collection clearfix">
+        <section class="collection clearfix" id="collection">
             <div class="wrapper">
                 <div>
                     <h2>latest collection</h2>
@@ -95,25 +122,22 @@
             <section class="linkBanner">
                 <div class="wrapper clearfix">
                     <div>
-                        <p>
-                            <i class="far fa-images"></i>
-                        </p>
-
+                        <a href="#"><i class="far fa-images"></i></a>
                         <h3>catalogue</h3>
                     </div>
                     
                     <div>
-                        <i class="far fa-calendar-alt"></i>
+                        <a href="#"><i class="far fa-calendar-alt"></i></a>
                         <h3>events</h3>
                     </div>
                     <div>
-                        <i class="far fa-handshake"></i>
+                        <a href="#"><i class="far fa-handshake"></i></a>
                         <h3>collaborations</h3>
                     </div>
                 </div>
         </section>
 
-        <section class="blog">
+        <section class="blog" id="blog">
             <div class="blogContainer clearfix">
 
                 <div class="imageContainer hiddenContainer clearfix hidden">
@@ -124,7 +148,7 @@
                     <div class="article">
                         <h2>sustainable materials</h2>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora totam placeat officia similique corrupti enim voluptates minus reiciendis repellendus quas dicta culpa laborum fugiat, tempore repellat! Tempore assumenda quae blanditiis? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum praesentium nobis!</p>
-                        <button>read more</button>
+                        <button><a href="#">read more</a></button>
                     </div>
                     
                     
@@ -136,12 +160,16 @@
                 <div class="imageContainer imageContainerBottom clearfix">
                     <img src="./assets/image-2-copy@2x.png" alt="a dangling hand wearing 2 rings and a watch">
                 </div>
+
+                <div class="imageContainer hiddenImageContainerBottom hidden clearfix">
+                    <img src="./assets/handMobile.png" alt="a dangling hand wearing 2 rings and a watch">
+                </div>
                 <div class="blogBottom wrapper">
                     
                     <div class="article clearfix">
                         <h2>mix & match</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam minus recusandae et velit nobis saepe eveniet repellendus. Corrupti fugiat quia illo recusandae, nostrum ipsa quis, enim consequuntur quibusdam dolor accusamus amet?</p>
-                        <button>read more</button>
+                        <button><a href="#">read more</a></button>
                     </div>
                     
                 </div>
@@ -149,15 +177,15 @@
             </div>
         </section>
 
-        <div class="bottomNavArea">
+        <div class="bottomNavArea" id="contact">
             <div class="wrapper clearfix container">
                 <div class="bottomNav">
                     <nav>
                         <ul>
                             <li><a href="#">Home</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Gallery</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#blog">Blog</a></li>
+                            <li><a href="#contact">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -167,7 +195,7 @@
                     <p>Subscribe to our newsletter to stay updated.</p>
                     <div class="emailContainer">
                         <input type="email" id="email" name="email" placeholder="email address">
-                        <button>subscribe</button>
+                        <button onclick="subscribe()">subscribe</button>
                     </div>
                 </div>
                     
@@ -188,5 +216,10 @@
         </div>
     </footer>
 
+    <script>
+        function subscribe() {
+          alert("You've just subscribed to the mailing list!");
+        }
+    </script>
 </body>
 </html>
