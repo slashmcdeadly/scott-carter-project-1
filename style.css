@@ -383,7 +383,6 @@ header p {
 
 .bottomNavArea, .hiddenBottomNav {
     background: #14171F;
-    /* min-height: 33vh; */
 }
 
 .container {
@@ -577,12 +576,6 @@ footer p  {
 
     .blogContainer .imageContainerTop {
         display: none;
-    }
-
-    /* crop photo in css somehow, or in photoshop */
-
-    .imageContainerBottom img {
-        object-fit: fill;
     }
 
     .hiddenContainer {
